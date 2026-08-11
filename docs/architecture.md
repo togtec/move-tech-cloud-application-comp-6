@@ -64,11 +64,15 @@ http://201.23.66.65:8080      (Grafana)
 graph TD
     User[Usuário / Cliente]
 
-    LB[LoadBalancer<br/>Kubernetes Service]
+    LB[LoadBalancer
+    Kubernetes Service]
 
-    App[Cloud Application API<br/>FastAPI<br/>2-6 Pods]
+    App[Cloud Application
+    API FastAPI 
+    2-6 Pods]
 
-    DB[(PostgreSQL<br/>Magalu Cloud DBaaS)]
+    DB[(PostgreSQL
+    Magalu Cloud DBaaS)]
 
     Prom[Prometheus]
 
@@ -80,4 +84,3 @@ graph TD
     Prom -->|HTTP /metrics :8000| App
     Graf -->|HTTP :9090| Prom 
 ```
-
